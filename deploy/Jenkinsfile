@@ -6,7 +6,7 @@ pipeline {
       steps {
         echo 'git fatch'
          git url: 'https://github.com/jamiesuh/spring-petclinic.git/',
-             branch: main, credentialsID: 'gitCredential'
+             branch: 'main', credentialID: 'gitCredential'
       }
     }
     stage('Maven Build') {
