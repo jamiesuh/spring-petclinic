@@ -32,8 +32,8 @@ pipeline {
     stage('Docker Image') {
       steps {
         echo 'docker image'
-          dir("${env.WORKSPACE}") {
-              sh 'docker build -t  ${ECR_DOCKER_IMAGE}:${ECR_DOCKER_TAG}.'
+        dir("${env.WORKSPACE}") {
+          sh 'docker build -t ${ECR_DOCKER_IMAGE}:${ECR_DOCKER_TAG}.'
         }
       }
     }  
